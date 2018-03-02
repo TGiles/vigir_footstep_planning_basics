@@ -113,11 +113,11 @@ bool PlanningState::operator==(const PlanningState& s2) const
     return false;
 
 /// TODO: Comment this in to plan with full steps (slower)! Check hashtag for performance improvements!
-  if (ivpPredState != s2.ivpPredState)
-    return false;
+  // if (ivpPredState != s2.ivpPredState)
+  //   return false;
 
-  if (ivpSuccState != s2.ivpSuccState)
-    return false;
+  // if (ivpSuccState != s2.ivpSuccState)
+  //   return false;
 
   // other variables may be ignored, because they are
   // selected by x and y
