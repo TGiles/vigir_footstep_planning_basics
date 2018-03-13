@@ -21,4 +21,15 @@ double Heuristic::getHeuristicValue(const State& from, const State& to, const St
 
   return h;
 }
+void Heuristic::updateHeuristicValues(const State& start, const State& goal)
+{
+  double h = 0.0;
+
+  for (HeuristicPlugin::Ptr plugin : getPlugins())
+  {
+    if (plugin)
+      plugin->updateHeuristicValues(start, goal);
+  }
+
+}
 }
