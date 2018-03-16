@@ -57,6 +57,11 @@ public:
 
   bool isUnique() const final;
 
+  /**
+   * @brief Initializes heuristic calculations based on change in planning problem
+   */
+  virtual void updateHeuristicValues(const State& start, const State& goal) {}
+
   bool loadParams(const vigir_generic_params::ParameterSet& params = vigir_generic_params::ParameterSet()) override;
 
   virtual double getHeuristicValue(const State& from, const State& to, const State& start, const State& goal) const = 0;

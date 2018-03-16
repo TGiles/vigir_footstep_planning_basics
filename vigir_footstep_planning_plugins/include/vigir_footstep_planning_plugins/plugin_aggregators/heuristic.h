@@ -45,6 +45,7 @@ public:
   Heuristic();
 
   double getHeuristicValue(const State& from, const State& to, const State& start, const State& goal) const;
+  void updateHeuristicValues(const State& start, const State& goal);
 };
 }
 
